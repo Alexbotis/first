@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class z2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите размерносит N");
+		int n=sc.nextInt();
+		int n1 = 0;
+		int n2 = 1; 
+		int k = n1+n2;
+		System.out.println("Числа фибоначчи:");
+		while (k<n)
+		{ 
+			System.out.printf("%d ", k);
+		n1 = n2;
+		n2 = k; k = n1+n2;
+		} 
+		} 
+
+	}
+
