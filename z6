@@ -1,0 +1,24 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class z6 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedReader reader = new BufferedReader( new InputStreamReader (System.in));
+	    String s = reader.readLine();
+		
+		s = s.replaceAll("[^A-Za-zА-Яа-я]", ""); // удалится все цифры
+	        System.out.println("Результат:"+delNoDigOrLet(s));
+	    }
+
+	    private static String delNoDigOrLet (String s) {
+	        StringBuilder sb = new StringBuilder();
+	        for (int i = 0; i < s.length(); i++) {
+	            if (Character .isLetterOrDigit(s.charAt(i)))
+	                sb.append(s.charAt(i));
+	        }
+	        return sb.toString();
+	    }
+	}
